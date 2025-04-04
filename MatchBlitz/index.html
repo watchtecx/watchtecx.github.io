@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchBlitz - Lightning-Fast Match-3 Fun for Apple Watch</title>
+    <style>
+        :root {
+            --primary-color: #0071e3;
+            --secondary-color: #333;
+            --background-color: #f5f5f7;
+            --text-color: #1d1d1f;
+            --section-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--section-bg);
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0071e3 0%, #42a5f5 100%);
+            color: white;
+            text-align: center;
+            padding: 5rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background-color: var(--section-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .screenshots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .screenshot-card {
+            background-color: var(--section-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .screenshot-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .screenshot-caption {
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .game-modes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mode-card {
+            background-color: var(--section-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .mode-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .mode-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .mode-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">MatchBlitz</div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#game-modes">Game Modes</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>✨ Lightning-Fast Match-3 Fun Built for Apple Watch!</h1>
+        <p>Experience the thrill of match-3 gaming right on your wrist. No phone needed!</p>
+        <a href="#features" class="cta-button">Explore Features</a>
+    </section>
+
+    <section id="features">
+        <h2 class="section-title">🎮 Core Gameplay</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3 class="feature-title">Swipe & Match Instantly</h3>
+                <p>Swap adjacent blocks to line up 3+ in a row or column – watch them explode!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3 class="feature-title">Rocket Boosters</h3>
+                <p>Clear an entire row or column in one tap!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💣</div>
+                <h3 class="feature-title">Bomb Blasters</h3>
+                <p>Detonate surrounding blocks for explosive high scores!</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">⌚️ Apple Watch Optimized</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🏃‍♂️</div>
+                <h3 class="feature-title">Play On the Go</h3>
+                <p>Designed for tiny screens – single-flick controls perfect for commutes or quick breaks!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Zero Clutter</h3>
+                <p>Jump into the game in 3 seconds with no complex menus!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots">
+        <h2 class="section-title">📱 Game Screenshots</h2>
+        <div class="screenshots">
+            <div class="screenshot-card">
+                <img src="images/home.png" alt="MatchBlitz Home Screen" class="screenshot-img">
+                <div class="screenshot-caption">Home Screen</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="images/easy.png" alt="Easy Mode Gameplay" class="screenshot-img">
+                <div class="screenshot-caption">Easy Mode</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="images/normal.png" alt="Normal Mode Gameplay" class="screenshot-img">
+                <div class="screenshot-caption">Normal Mode</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="images/hard.png" alt="Hard Mode Gameplay" class="screenshot-img">
+                <div class="screenshot-caption">Hard Mode</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="game-modes">
+        <h2 class="section-title">🔥 Game Modes</h2>
+        <div class="game-modes">
+            <div class="mode-card">
+                <div class="mode-icon">🌟</div>
+                <h3 class="mode-title">Easy Mode</h3>
+                <p>Relax and unwind with stress-free matching! Perfect for beginners or when you just want to chill.</p>
+            </div>
+            <div class="mode-card">
+                <div class="mode-icon">⚡</div>
+                <h3 class="mode-title">Medium Mode</h3>
+                <p>Balance speed and tactics for steady progress! The perfect challenge for casual players.</p>
+            </div>
+            <div class="mode-card">
+                <div class="mode-icon">🏆</div>
+                <h3 class="mode-title">Hard Mode</h3>
+                <p>Unlock massive chain combos and push your skills to the limit! For those seeking the ultimate challenge.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo" style="color: white; margin-bottom: 1rem;">MatchBlitz</div>
+            <p>Your Pocket-Sized Brain Teaser</p>
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#screenshots">Screenshots</a>
+                <a href="#game-modes">Game Modes</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <p>Contact us: <a href="mailto:watchtecx@hotmail.com" style="color: white;">watchtecx@hotmail.com</a></p>
+            <p class="copyright">© 2025 WatchTecx. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
