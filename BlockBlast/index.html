@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Jam Blaster - Ultimate Tile-Puzzling Fun on iWatch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f5f5f7;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            color: #6a11cb;
+        }
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 3rem 0;
+        }
+        .feature {
+            flex-basis: 30%;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+        .feature h3 {
+            color: #2575fc;
+            margin-bottom: 1rem;
+        }
+        .screenshots {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 3rem 0;
+        }
+        .screenshot {
+            flex-basis: 30%;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .screenshot img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .how-to-play {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+        ul {
+            margin-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        footer a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .difficulty-levels {
+            margin: 3rem 0;
+        }
+        .level {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        .level h3 {
+            color: #2575fc;
+            margin-bottom: 0.5rem;
+        }
+        @media (max-width: 768px) {
+            .feature, .screenshot {
+                flex-basis: 100%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            .tagline {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Block Jam Blaster</h1>
+        <p class="tagline">Ultimate Tile-Puzzling Fun on iWatch</p>
+    </header>
+
+    <div class="container">
+        <section>
+            <p>Craving a quick, brain-boosting escape during your bustling day? Block Jam Blaster is your go-to iWatch puzzle game—designed for instant play on your wrist, blending simple controls with strategic depth to keep you hooked!</p>
+        </section>
+
+        <section class="screenshots">
+            <div class="screenshot">
+                <img src="images/1.png" alt="Casual Mode Screenshot">
+            </div>
+            <div class="screenshot">
+                <img src="images/2.png" alt="Strategy Mode Screenshot">
+            </div>
+            <div class="screenshot">
+                <img src="images/3.png" alt="Extreme Mode Screenshot">
+            </div>
+        </section>
+
+        <section class="difficulty-levels">
+            <h2>Three Challenges, One Grid—Master the Art of Placement</h2>
+            <p>Choose your path across three difficulty tiers, all set on the same grid but with escalating tile complexity:</p>
+            
+            <div class="level">
+                <h3>Casual</h3>
+                <p>Start with clean, straightforward tiles (squares, lines) to ease into the rhythm. Perfect for unwinding and racking up quick points.</p>
+            </div>
+            
+            <div class="level">
+                <h3>Strategy</h3>
+                <p>Tackle angled and jagged shapes (L-Tiles, T-Tiles). Plan placements carefully to clear rows/columns and avoid gridlock—every move counts!</p>
+            </div>
+            
+            <div class="level">
+                <h3>Extreme</h3>
+                <p>Face chaotic, asymmetrical tiles that demand split-second decisions. Only the sharpest minds can chain combos and dominate the high-score board!</p>
+            </div>
+        </section>
+
+        <section class="how-to-play">
+            <h2>How to Play: Drag, Plan, and Blast!</h2>
+            <ul>
+                <li><strong>Drag & Drop Tiles:</strong> Strategically position tiles to fill entire rows or columns. Watch them vanish with a satisfying pop and earn points—clear multiple lines at once for massive multipliers!</li>
+                <li><strong>Smart Scoring:</strong> Every placement matters. The game ends when no space is left, so think ahead to maximize combos and minimize waste.</li>
+            </ul>
+        </section>
+
+        <section class="features">
+            <h2>Why Block Jam Blaster?</h2>
+            <div class="feature">
+                <h3>Immersive Audio Feedback</h3>
+                <p>Crisp sound effects enhance every tile elimination, making each blast feel wildly rewarding.</p>
+            </div>
+            <div class="feature">
+                <h3>Play Anytime, Anywhere</h3>
+                <p>No Wi-Fi? No problem. Enjoy offline play during commutes, coffee breaks, or whenever you need a quick mental boost.</p>
+            </div>
+            <div class="feature">
+                <h3>Perfect for Quick Sessions</h3>
+                <p>Designed specifically for the iWatch, enjoy challenging gameplay in short bursts throughout your day.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2023 Block Jam Blaster. All rights reserved.</p>
+        <p>Technical Support: <a href="mailto:watchtecx@hotmail.com">watchtecx@hotmail.com</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
