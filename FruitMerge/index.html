@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Watermelon Merge - The Ultimate iWatch Puzzle Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 1rem;
+            color: #ff6b6b;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #45a049;
+        }
+        
+        .features {
+            padding: 4rem 0;
+            background-color: white;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-item {
+            background-color: #f1f1f1;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .feature-item h3 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+        
+        .screenshots {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .screenshot-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .screenshot-item img:hover {
+            transform: scale(1.03);
+        }
+        
+        .how-to-play {
+            padding: 4rem 0;
+            background-color: #fff8e1;
+        }
+        
+        .play-steps {
+            margin-top: 2rem;
+        }
+        
+        .play-step {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background-color: #ff6b6b;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .challenges {
+            padding: 4rem 0;
+        }
+        
+        .challenge-list {
+            list-style-type: none;
+        }
+        
+        .challenge-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .challenge-list li:before {
+            content: "•";
+            color: #ff6b6b;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .contact-info {
+            margin-top: 1rem;
+        }
+        
+        .contact-info a {
+            color: #ff8e53;
+            text-decoration: none;
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .feature-grid, .screenshot-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Fruit Watermelon Merge</h1>
+            <p class="tagline">Dive into the Juicy World of Fruit Merging – Now on Your Wrist!</p>
+        </div>
+    </header>
+    
+    <section class="features">
+        <div class="container">
+            <h2>Game Features</h2>
+            <p>Experience the thrill of fruit merging wherever you go with Fruit Watermelon Merge, the compact puzzle game designed for your iWatch. Immerse yourself in a vibrant world where your goal is to merge identical fruits into bigger, more impressive treats—all while avoiding the chaos of an overflowing container.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Satisfying Visuals</h3>
+                    <p>Watch small fruits transform into vibrant, larger versions with smooth animations designed for crisp, clear viewing on your wrist.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>Strategic Brain Teaser</h3>
+                    <p>Test your spatial awareness and planning skills as you balance merges and container space.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>Unlock Fruity Delights</h3>
+                    <p>Start with berries and grapes, then work your way up to pineapples, melons, and the coveted watermelon. Each merge reveals a new, juicy surprise!</p>
+                </div>
+                
+                <div class="feature-item">
+                    <h3>No-Fuss Entertainment</h3>
+                    <p>Simple to pick up, hard to master. Ideal for casual players and puzzle enthusiasts alike, with endless challenges to keep you engaged.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="screenshots">
+        <div class="container">
+            <h2>Game Screenshots</h2>
+            <p>See the juicy action in these vibrant screenshots from Fruit Watermelon Merge!</p>
+            
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="f1.png" alt="Fruit Watermelon Merge Gameplay Screenshot 1">
+                </div>
+                
+                <div class="screenshot-item">
+                    <img src="f2.png" alt="Fruit Watermelon Merge Gameplay Screenshot 2">
+                </div>
+                
+                <div class="screenshot-item">
+                    <img src="f3.png" alt="Fruit Watermelon Merge Gameplay Screenshot 3">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="how-to-play">
+        <div class="container">
+            <h2>How to Play on Your Wrist</h2>
+            <p>Master the art of fruit merging with these simple controls optimized for your iWatch:</p>
+            
+            <div class="play-steps">
+                <div class="play-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Swipe & Merge</h3>
+                        <p>Tap and swipe to move fruits left or right as they drop into the container. When two matching fruits meet, they merge into a larger, higher-scoring fruit. Chain merges to unlock bigger rewards!</p>
+                    </div>
+                </div>
+                
+                <div class="play-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Precision Placement</h3>
+                        <p>Every inch of space matters. Plan each move to set up combos and prevent the fruit stack from spilling over the edges. Timing and strategy are key!</p>
+                    </div>
+                </div>
+                
+                <div class="play-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Survive the Stack</h3>
+                        <p>As fruits grow, the container fills up fast. Keep your cool and manage space wisely to avoid game over. How many watermelons can you create before the pressure builds?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="challenges">
+        <div class="container">
+            <h2>Tiny Screen, Big Challenges</h2>
+            <p>Don't let the compact display fool you - Fruit Watermelon Merge packs a punch with these exciting challenges:</p>
+            
+            <ul class="challenge-list">
+                <li>
+                    <strong>On-the-Go Fun:</strong> Perfect for quick play sessions, whether you're waiting, commuting, or taking a break. The intuitive touch controls are optimized for smaller displays.
+                </li>
+                <li>
+                    <strong>Challenge the Limits:</strong> Strive to grow the largest fruits and reach the highest tiers. Only 1% of players achieve the legendary max-level watermelon! Will you be one of them?
+                </li>
+                <li>
+                    <strong>Endless Replayability:</strong> No two games are the same! Enjoy random fruit spawns and escalating difficulty that keep you coming back for "just one more merge."
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer id="download">
+        <div class="container">
+            <h2>Fruit Watermelon Merge</h2>
+            <p>Swipe, merge, and dominate the fruit stack—one tiny move at a time!</p>
+            
+            <div class="contact-info">
+                <p>Need help? Contact our support team: <a href="mailto:watchtecx@hotmail.com">watchtecx@hotmail.com</a></p>
+                <p>&copy; 2023 Fruit Watermelon Merge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
