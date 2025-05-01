@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop Star Blast - An Innovative iWatch Puzzle Game by WatchTec</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .star-icon {
+            color: #fbbf24;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+    <!-- Navigation -->
+    <nav class="hero-gradient text-white p-4 md:p-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <i class="fas fa-star-half-alt text-2xl mr-2 star-icon"></i>
+                <span class="text-xl font-bold">Pop Star Blast</span>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#gameplay" class="nav-link">Gameplay</a>
+                <a href="privacy.html" class="nav-link">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Pop Star Blast</h1>
+                    <p class="text-xl md:text-2xl mb-8">An innovative puzzle game designed specifically for iWatch that combines classic gameplay with creative twists!</p>
+                    <div class="flex space-x-4">
+                        <a href="#gameplay" class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition duration-300">Learn More</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-2xl flex items-center justify-center overflow-hidden">
+                        <div class="absolute inset-4 bg-gray-100 rounded-full flex items-center justify-center">
+                            <div class="grid grid-cols-3 gap-2 w-3/4 h-3/4">
+                                <div class="bg-red-400 rounded-lg transform hover:scale-105 transition"></div>
+                                <div class="bg-blue-400 rounded-lg transform hover:scale-105 transition"></div>
+                                <div class="bg-green-400 rounded-lg transform hover:scale-105 transition"></div>
+                                <div class="bg-yellow-400 rounded-lg transform hover:scale-105 transition"></div>
+                                <div class="bg-purple-400 rounded-lg transform hover:scale-105 transition"></div>
+                                <div class="bg-pink-400 rounded-lg transform hover:scale-105 transition"></div>
+                                <div class="bg-indigo-400 rounded-lg transform hover:scale-105 transition"></div>
+                                <div class="bg-blue-300 rounded-lg transform hover:scale-105 transition"></div>
+                                <div class="bg-red-300 rounded-lg transform hover:scale-105 transition"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Game Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Meticulously Designed Levels</h3>
+                    <p class="text-gray-600">Each level is crafted to deliver an unparalleled sense of satisfaction as you clear the board!</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Exciting Star Effects</h3>
+                    <p class="text-gray-600">Experience rich variety of level mechanics and exciting star effects that keep the fun escalating!</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Unlimited Levels</h3>
+                    <p class="text-gray-600">No level limits! Effortlessly start an addictive and intellectually stimulating journey that never ends.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Designed for iWatch</h3>
+                    <p class="text-gray-600">Specifically optimized for the iWatch interface, providing a perfect gaming experience on your wrist.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-hand-pointer"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Simple Controls</h3>
+                    <p class="text-gray-600">Incredibly easy to pick up! Just click on adjacent stars of the same color to eliminate them and score points.</p>
+                </div>
+                <div class="feature-card bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="text-indigo-600 text-4xl mb-4">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Fresh & Vibrant Interface</h3>
+                    <p class="text-gray-600">Enjoy a colorful, modern design that enhances your gaming experience with visual delight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gameplay Section -->
+    <section id="gameplay" class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">How to Play</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="bg-white p-6 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4">Simple & Addictive Gameplay</h3>
+                        <ol class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">1</span>
+                                <p><strong>Find Matching Stars:</strong> Look for groups of adjacent stars with the same color.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">2</span>
+                                <p><strong>Tap to Clear:</strong> Simply tap on a group to clear them from the board.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">3</span>
+                                <p><strong>Score Points:</strong> The larger the group you clear, the more points you'll earn!</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">4</span>
+                                <p><strong>Strategic Clearing:</strong> Plan your moves to create larger groups for maximum points.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-indigo-600 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">5</span>
+                                <p><strong>Clear the Board:</strong> Try to clear the entire board for bonus points and satisfaction!</p>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative w-full h-64 md:h-80 bg-gray-200 rounded-xl overflow-hidden shadow-md">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <i class="fas fa-play-circle text-6xl text-indigo-600 mb-4"></i>
+                                <p class="text-lg font-medium">Gameplay Preview</p>
+                                <p class="text-sm text-gray-600">Click to watch how to play</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">What Players Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-4">"This game is perfect for quick gaming sessions on my iWatch! The controls are intuitive and the satisfaction of clearing a board is addictive."</p>
+                    <p class="font-semibold">- Alex M.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-4">"I love how I can play a quick round while waiting for my coffee. The star effects are so satisfying and the unlimited levels keep me coming back!"</p>
+                    <p class="font-semibold">- Jamie T.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="italic mb-4">"Pop Star Blast is my go-to game for brain exercise! It's simple yet challenging, and the vibrant colors make it a joy to play on my iWatch."</p>
+                    <p class="font-semibold">- Sam K.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-star-half-alt text-2xl mr-2 star-icon"></i>
+                        <span class="text-xl font-bold">Pop Star Blast</span>
+                    </div>
+                    <p class="mt-2 text-gray-400">© 2025 WatchTec. All rights reserved.</p>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                            <li><a href="#features" class="text-gray-400 hover:text-white transition">Features</a></li>
+                            <li><a href="#gameplay" class="text-gray-400 hover:text-white transition">Gameplay</a></li>
+                            <li><a href="privacy.html" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold mb-3">Contact</h3>
+                        <p class="text-gray-400">Email: watchtecx@hotmail.com</p>
+                        <div class="flex space-x-4 mt-3">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
