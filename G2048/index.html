@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 & 2248 - The Ultimate Watch Number Merge Game | WatchTec</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-bg: #f9f9f9;
+            --dark-bg: #34495e;
+            --text-color: #333;
+            --light-text: #ecf0f1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #fff;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-bg));
+            color: var(--light-text);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        section {
+            padding: 3rem 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: var(--light-bg);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            margin: 1.5rem 0 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            margin: 1rem 0;
+        }
+        
+        .feature-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: '•';
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .game-modes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .mode-card {
+            flex: 1 1 45%;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .mode-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .mode-card h3 {
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .how-to-play {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .feature-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: var(--light-text);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            margin: 1rem 0;
+        }
+        
+        .footer-links a {
+            color: var(--light-text);
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .game-modes {
+                flex-direction: column;
+            }
+            
+            .mode-card {
+                flex: 1 1 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>WatchTec</h1>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>The Ultimate Dual-Mode Number Merge Game for Watch</h1>
+            <p>2048 & 2248 Combined! Dive into a unique Watch experience that blends the iconic strategy of classic 2048 with the dynamic freedom of 2248—two beloved puzzle games in one sleek package.</p>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2>Game Overview</h2>
+            <p>Merge identical number blocks to build higher values, sharpen your mind, and get hooked on a challenge that's as addictive as it is brain-boosting. Experience two distinct gameplay modes in one elegant application designed specifically for your Watch.</p>
+            
+            <div class="game-modes">
+                <div class="mode-card">
+                    <h3>2248 MODE: 8-DIRECTIONAL MERGING MAYHEM</h3>
+                    <ul class="feature-list">
+                        <li><strong>Full Freedom Sliding:</strong> Slide blocks in 8 directions—up, down, left, right, and all diagonals—to connect matching numbers effortlessly. Diagonal moves let you reach distant blocks, creating explosive merges (2+2=4, 4+4=8, and beyond!).</li>
+                        <li><strong>Strategic Chain Reactions:</strong> Merge multiple same-number blocks in a single slide to craft massive value leaps. Position three 2s diagonally? Merge them into a 4 in one smooth motion—no grid limits, just creative strategy.</li>
+                        <li><strong>Dynamic Puzzle Design:</strong> The 8-directional grid keeps every move fresh, testing your reflexes and spatial awareness as you chase the highest possible number.</li>
+                    </ul>
+                </div>
+                
+                <div class="mode-card">
+                    <h3>2048 MODE: CLASSIC GRID, TIMELESS STRATEGY</h3>
+                    <ul class="feature-list">
+                        <li><strong>4-Way Traditional Gameplay:</strong> Return to the roots of 2048 with up/down/left/right slides. Merge adjacent identical numbers (2+2=4, 8+8=16) and strategically anchor high-value blocks in corners to avoid grid lock.</li>
+                        <li><strong>Pure Strategic Depth:</strong> Every slide demands careful planning—squeeze out maximum merges, preserve empty spaces, and gradually build toward the legendary 2048 (or even higher!). Perfect for purists who love the original's slow-burn challenge.</li>
+                        <li><strong>Nostalgic Satisfaction:</strong> Simple rules, deep strategy—lose yourself in the timeless joy of incremental progress and grid mastery.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2>HOW TO PLAY</h2>
+            <div class="how-to-play">
+                <ul class="feature-list">
+                    <li><strong>Switch Modes Freely:</strong> Toggle between 2248's wild 8-directional slides and 2048's classic 4-way grid to suit your mood.</li>
+                    <li><strong>Core Merge Rule:</strong> In both modes, slide matching numbers to combine them into their sum (e.g., 2+2=4). The goal? Merge strategically to create the highest number possible before the grid fills up.</li>
+                    <li><strong>Watch-Optimized Controls:</strong> Swipe with one finger on your Watch screen—intuitive, responsive, and designed for quick, satisfying sessions.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2>FEATURES BUILT FOR WATCH</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Minimalist Elegance</h3>
+                    <p>Clean, watch-friendly design puts numbers and grids front and center—no clutter, just pure puzzle focus.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Smooth & Snappy Controls</h3>
+                    <p>Precision-tuned for small screens, slides feel fluid and responsive, ensuring every merge lands exactly where you want it.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Pick Up & Play</h3>
+                    <p>Auto-save progress lets you resume instantly, whether you're tackling a quick 2248 session during your commute or a long 2048 strategy grind at home.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Brain-Training Fun</h3>
+                    <p>Boost memory, concentration, and problem-solving skills while enjoying the satisfying rush of each successful merge.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container">
+            <h2>WHY PLAY?</h2>
+            <ul class="feature-list">
+                <li><strong>Two Games, One Watch:</strong> Get the best of both worlds—classic 2048's strategic depth and 2248's free-wheeling creativity—all optimized for your wrist.</li>
+                <li><strong>Addictive Loop:</strong> The thrill of "just one more move" stays with you, thanks to endless grid variations and the constant pursuit of higher numbers.</li>
+                <li><strong>Perfect for Any Moment:</strong> Play offline, anytime. Short on time? A quick 2248 round. Ready to dive deep? 2048's grid awaits your master plan.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <h3>WatchTec</h3>
+            <div class="footer-links">
+                <a href="privacy_policy.html">Privacy Policy</a>
+            </div>
+            <p>Contact: watchtecx@hotmail.com</p>
+            <p>&copy; 2023 WatchTec. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
