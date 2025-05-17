@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="featureGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3498db;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="80" fill="url(#featureGrad)" opacity="0.1" />
+  <!-- Puzzle Pieces -->
+  <path d="M70,70 L95,70 C95,65 100,60 105,65 C110,70 115,65 115,60 L115,70 L130,70 L130,95 C135,95 140,100 135,105 C130,110 135,115 140,115 L130,115 L130,130 L105,130 C105,135 100,140 95,135 C90,130 85,135 85,140 L85,130 L70,130 Z" fill="url(#featureGrad)" />
+  <!-- Finger Swipe -->
+  <path d="M150,90 C160,100 160,120 150,130" fill="none" stroke="#2c3e50" stroke-width="4" stroke-linecap="round" />
+  <circle cx="150" cy="90" r="5" fill="#2c3e50" />
+  <path d="M150,90 L155,95 L145,95 Z" fill="#2c3e50" />
+</svg>
